@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Jumbotron section for a welcoming message -->
+<div class="jumbotron text-center">
+    <h2>Welcome to Amazon Review Sentiment Analysis</h2>
+    <p class="lead">Explore the sentiment analysis of Amazon product reviews to gain insights into customer satisfaction and product quality.</p>
+</div>
+<!-- List of links to different visualizations -->
+<h2 class="text-center">Visualizations</h2>
+<div class="list-group">
+    <a href="{{ url_for('sentiment_distribution') }}" class="list-group-item list-group-item-action">Sentiment Distribution</a>
+    <a href="{{ url_for('positive_wordcloud') }}" class="list-group-item list-group-item-action">Positive Word Cloud</a>
+    <a href="{{ url_for('negative_wordcloud') }}" class="list-group-item list-group-item-action">Negative Word Cloud</a>
+    <a href="{{ url_for('neutral_wordcloud') }}" class="list-group-item list-group-item-action">Neutral Word Cloud</a>
+    <a href="{{ url_for('positive_adjectives') }}" class="list-group-item list-group-item-action">Positive Adjectives</a>
+    <a href="{{ url_for('negative_adjectives') }}" class="list-group-item list-group-item-action">Negative Adjectives</a>
+    <a href="{{ url_for('neutral_adjectives') }}" class="list-group-item list-group-item-action">Neutral Adjectives</a>
+</div>
+<!-- About section explaining the purpose of the project -->
+<div class="mt-5">
+    <h2>About This Project</h2>
+    <p>The Amazon Review Sentiment Analysis project aims to enhance decision-making for marketing strategies and product development in the e-commerce industry by providing a detailed analysis of customer sentiments expressed in Amazon product reviews. By examining the sentiment distribution, word clouds, and common adjectives used in reviews, this project helps identify key areas of customer satisfaction and areas needing improvement.</p>
+</div>
+{% endblock %}

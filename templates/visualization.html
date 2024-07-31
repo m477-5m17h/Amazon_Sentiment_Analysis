@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Title and image for the visualization -->
+<h2 class="text-center">{{ title }}</h2>
+<div class="text-center">
+    <img src="{{ url_for('visualizations', filename=image) }}" alt="{{ title }}" class="img-fluid">
+</div>
+{% endblock %}
